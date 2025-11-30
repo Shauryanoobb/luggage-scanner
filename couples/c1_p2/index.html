@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <title>Luggage Tag</title>
+
+  <style>
+    /* Elegant serif for name */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+  </style>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
-  <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm text-center">
-    <img src="photo.JPG" class="w-48 h-48 object-cover rounded-full mx-auto mb-4" />
-    <h1 class="text-2xl font-semibold">khetarpal</h1>
-    <p class="text-gray-700 mt-2">Phone: +91 98765 43210</p>
-    <p class="text-gray-700">Alternate: +91 98765 43211</p>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#f7f2e8] to-[#f2e9dd]">
+
+  <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl max-w-xs w-full text-center border border-[#e7dcc8]">
+
+    <!-- Photo -->
+    <div class="relative mx-auto w-40 h-40 mb-4">
+      <div class="absolute inset-0 rounded-full border-4 border-[#d9b67c]"></div>
+      <img 
+        src="photo.JPG" 
+        class="w-40 h-40 object-cover rounded-full"
+      />
+    </div>
+
+    <!-- Name -->
+    <h1 class="text-2xl font-semibold" style="font-family: 'Playfair Display', serif;">
+      Khetarpal
+    </h1>
+
+    <!-- Decorative Gold Divider -->
+    <div class="my-3 flex justify-center">
+      <div class="w-12 h-[2px] bg-[#d9b67c] rounded-full"></div>
+    </div>
+
+    <!-- Contact Details -->
+    <p class="text-gray-700 text-sm mb-1">
+      📞 <span class="font-medium">+91 98765 43210</span>
+    </p>
+
+    <p class="text-gray-700 text-sm">
+      ✆ <span class="font-medium">+91 98765 43211</span>
+    </p>
+
   </div>
+
 </body>
 </html>
