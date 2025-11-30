@@ -4,46 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <title>Luggage Tag</title>
+  <title>Wedding Luggage Tag - Khetarpal</title>
 
   <style>
-    /* Elegant serif for name */
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+    
+    body {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .elegant-border {
+      background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 50%, #d4af37 100%);
+    }
+    
+    .ornament {
+      color: #d4af37;
+      font-size: 1.5rem;
+      opacity: 0.7;
+    }
+    
+    .shine {
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .photo-frame {
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+    }
   </style>
 </head>
 
-<body class="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#f7f2e8] to-[#f2e9dd]">
+<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#faf8f3] via-[#f5f0e8] to-[#f0e9dd]">
 
-  <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl max-w-xs w-full text-center border border-[#e7dcc8]">
+  <div class="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border-2 border-[#e8dcc3] relative overflow-hidden">
+    
+    <!-- Decorative corner ornaments -->
+    <div class="absolute top-3 left-3 ornament shine">❦</div>
+    <div class="absolute top-3 right-3 ornament shine">❦</div>
+    <div class="absolute bottom-3 left-3 ornament shine">❦</div>
+    <div class="absolute bottom-3 right-3 ornament shine">❦</div>
 
-    <!-- Photo -->
-    <div class="relative mx-auto w-40 h-40 mb-4">
-      <div class="absolute inset-0 rounded-full border-4 border-[#d9b67c]"></div>
-      <img 
-        src="photo.JPG" 
-        class="w-40 h-40 object-cover rounded-full"
-      />
+    <!-- Top decorative flourish -->
+    <div class="mb-6 flex justify-center">
+      <svg width="120" height="20" viewBox="0 0 120 20" class="opacity-60">
+        <path d="M0 10 Q30 0, 60 10 T120 10" stroke="#d4af37" stroke-width="1" fill="none"/>
+        <path d="M0 12 Q30 18, 60 12 T120 12" stroke="#d4af37" stroke-width="1" fill="none"/>
+      </svg>
     </div>
 
-    <!-- Name -->
-    <h1 class="text-2xl font-semibold" style="font-family: 'Playfair Display', serif;">
+    <!-- Photo with elegant frame -->
+    <div class="relative mx-auto w-44 h-44 mb-6">
+      <div class="absolute inset-0 rounded-full elegant-border p-1 photo-frame">
+        <div class="w-full h-full rounded-full bg-white p-1">
+          <img 
+            src="photo.JPG" 
+            alt="Khetarpal"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Name with elegant typography -->
+    <h1 class="text-4xl font-semibold mb-2 text-gray-800" style="font-family: 'Playfair Display', serif; letter-spacing: 0.05em;">
       Khetarpal
     </h1>
 
+    <!-- Subtitle -->
+    <p class="text-sm text-gray-500 mb-4 tracking-widest uppercase" style="font-size: 0.7rem;">
+      Wedding Guest
+    </p>
+
     <!-- Decorative Gold Divider -->
-    <div class="my-3 flex justify-center">
-      <div class="w-12 h-[2px] bg-[#d9b67c] rounded-full"></div>
+    <div class="my-5 flex justify-center items-center gap-2">
+      <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
+      <div class="w-2 h-2 rounded-full bg-[#d4af37] shine"></div>
+      <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
     </div>
 
-    <!-- Contact Details -->
-    <p class="text-gray-700 text-sm mb-1">
-      📞 <span class="font-medium">+91 98765 43210</span>
-    </p>
+    <!-- Contact Details with elegant spacing -->
+    <div class="space-y-3 text-gray-700">
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-[#d4af37] text-lg">✦</span>
+        <a href="tel:+919876543210" class="text-base font-medium hover:text-[#d4af37] transition-colors">
+          +91 98765 43210
+        </a>
+      </div>
 
-    <p class="text-gray-700 text-sm">
-      ✆ <span class="font-medium">+91 98765 43211</span>
-    </p>
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-[#d4af37] text-lg">✦</span>
+        <a href="tel:+919876543211" class="text-base font-medium hover:text-[#d4af37] transition-colors">
+          +91 98765 43211
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom decorative flourish -->
+    <div class="mt-6 flex justify-center">
+      <svg width="80" height="15" viewBox="0 0 80 15" class="opacity-60">
+        <path d="M0 7 Q20 2, 40 7 T80 7" stroke="#d4af37" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
 
   </div>
 
